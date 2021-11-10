@@ -60,7 +60,12 @@ namespace MVC_Assignment_Basic
                     pattern: "/FeverCheck",
                     defaults: new { controller = "Doctor", action = "Index"}
                 );
-            
+                endpoints.MapControllerRoute(
+          name: "guessingGame",
+          pattern: "/GuessingGame",
+          defaults: new { controller = "Home", action = "Guessing_Game" }
+      );
+
             });
         }
     }

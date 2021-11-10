@@ -35,7 +35,7 @@ namespace MVC_Assignment_Basic.Controllers
         }
 
         [HttpGet]
-        public IActionResult GuessingGame()
+        public IActionResult Guessing_Game()
         {
             Random rand = new Random();
 
@@ -45,7 +45,7 @@ namespace MVC_Assignment_Basic.Controllers
         }
 
         [HttpPost]
-        public IActionResult GuessingGame(int guess)
+        public IActionResult Guessing_Game(int guess)
         {
             int hiddenNumber = (int)HttpContext.Session.GetInt32("Rnd");
 
