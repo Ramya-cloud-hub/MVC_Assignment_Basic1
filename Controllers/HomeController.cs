@@ -34,5 +34,44 @@ namespace MVC_Assignment_Basic.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult GuessingGame()
+        {
+            Random rand = new Random();
+
+            HttpContext.Session.SetInt32("Rnd", rand.Next(1, 101));
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult GuessingGame(int guess)
+        {
+            int hiddenNumber = (int)HttpContext.Session.GetInt32("Rnd");
+
+            if (guess > 100 || guess < 1)
+            {
+                ViewData["Message"] = "Your guess isn't valid, You have to guess number between 1 to 100";
+            }
+            else if (guess == hiddenNumber)
+            {
+
+                ViewData["Message"] = "Congratulations your guess is correct!";
+                HttpContext.Session.Clear();
+
+                Random rand = new Random();
+                HttpContext.Session.SetInt32("Rnd", rand.Next(1, 101));
+            }
+            else if (guess > hiddenNumber)
+            {
+                ViewData["Message"] = "Your guess is too big!";
+            }
+            else
+            {
+                ViewData["Message"] = "You guessed is too small!";
+            }
+
+            return View();
+        }
     }
 }

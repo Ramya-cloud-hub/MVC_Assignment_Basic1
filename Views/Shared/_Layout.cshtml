@@ -6,15 +6,13 @@
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/css/StyleSheet.css" />
 </head>
-
 <body>
     <header>
         <nav>
             <div>
-                
                 <ul>
                     <li>
-                        <img  src="~/img/logoYoga.png" alt="logo"/>
+                        <img src="~/img/logoYoga.png" alt="logo" />
                     </li>
                     <li>
                         <a class="navLink"> @Html.ActionLink("Home", "Index", "Home", null, new { @class = "actionLink" }) </a>
@@ -31,6 +29,10 @@
                     <li>
                         <a class="navLink"> @Html.ActionLink("FeverCheck", "Index", "Doctor", null, new { @class = "actionLink" }) </a>
                     </li>
+
+                    <li>
+                        <a class="navLink"> @Html.ActionLink("Guessing Game", "GuessingGame", "Home", null, new { @class = "actionLink" }) </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -44,6 +46,4 @@
         <p>&copy;Ramya Talagavadi Kalegowda, @DateTime.Now.ToString("yy-MM-dd")</p>
     </footer>
 </body>
-
-
 </html>

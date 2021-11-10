@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "GuessingGame";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Home" asp-action="GuessingGame" metod="post">
+    <label>Guessing_Game</label>
+
+    <input type="number" name="guess" min="1" max="100">
+    <br/>
+    <input type="submit" value="Submit" />
+</form>
+
+@{
+    var data = ViewData["Message"];
+}
+
+<p>
+    @if (data != null)
+    {@ViewData["Message"]}
+</p>
