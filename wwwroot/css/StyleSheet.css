@@ -1,0 +1,52 @@
+﻿body{
+text-align:center;
+font-family:'Times New Roman', Times, serif;
+color:black;
+}
+header {
+   
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: red;
+}
+img{
+    width:50px;
+    height:70px;
+    padding:10px;
+    margin:10px;
+
+}
+
+ul li {
+    float:left;
+    padding-left:50px;
+    text-decoration:none;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a.actionLink {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-brand {
+    color: black;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+}
